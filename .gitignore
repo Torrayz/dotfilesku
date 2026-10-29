@@ -1,0 +1,16 @@
+# Never commit secrets or personal state
+.bashrc_custom
+.zshrc_custom
+.bash_history
+.zsh_history
+.bash_profile
+.env
+.env.*
+*.log
+
+# OS noise
+.DS_Store
+Thumbs.db
+
+# Wallpapers are intentionally not versioned (size / license). Add your own locally.
+home/.config/ml4w/wallpapers/

@@ -1,0 +1,119 @@
+// Inspired by Catnap (MODIFIED: Custom Image Support)
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+    "logo": {
+        // === BAGIAN INI DOANG YG GW UBAH ===
+        "type": "kitty",
+        "source": "@HOME@/logo.png", // <--- GANTI PATH GAMBAR LU DISINI
+        "width": 32,    // Atur lebar gambar biar pas sama tinggi kotak
+        "height": 16,   // Atur tinggi gambar
+        "padding": {
+            "top": 1,
+            "right": 2
+        }
+    },
+    "display": {
+        "separator": " "
+    },
+    "modules": [
+        // --- HEADER ---
+        {
+            "key": "╭───────────╮",
+            "type": "custom"
+        },
+        // --- USER INFO ---
+        {
+            "key": "│ {#31} user    {#keys}│",
+            "type": "title",
+            "format": "{user-name}"
+        },
+        {
+            "key": "│ {#32}󰇅 hname   {#keys}│",
+            "type": "title",
+            "format": "{host-name}"
+        },
+        {
+            "key": "│ {#33}󰩟 ip addr {#keys}│",
+            "type": "localip",
+            "showIpv6": false,
+            "showMac": false
+        },
+        // --- GANTINYA OS AGE (PACKAGES) ---
+        {
+            "key": "│ {#34}󰏖 pkgs    {#keys}│",  // <--- INI PENGGANTINYA
+            "type": "packages"
+        },
+        {
+            "key": "│ {#35}󰅐 uptime  {#keys}│",
+            "type": "uptime"
+        },
+        // --- OS INFO ---
+        {
+            "key": "│ {#36}{icon} distro  {#keys}│",
+            "type": "os"
+        },
+        {
+            "key": "│ {#31} kernel  {#keys}│",
+            "type": "kernel"
+        },
+        {
+            "key": "│ {#32} wm      {#keys}│",
+            "type": "wm"
+        },
+        {
+            "key": "│ {#33} shell   {#keys}│",
+            "type": "shell"
+        },
+        {
+            "key": "│ {#34} term    {#keys}│",
+            "type": "terminal"
+        },
+        // --- HARDWARE ---
+        {
+            "key": "│ {#35}󰍹 display {#keys}│", // <--- NAMBAH INI (RESOLUSI)
+            "type": "display",
+            "compactType": "original"
+        },
+        {
+            "key": "│ {#36}󰍛 cpu     {#keys}│",
+            "type": "cpu",
+            "showPeCoreCount": true
+        },
+        {
+            "key": "│ {#31}󰢮 gpu     {#keys}│",
+            "type": "gpu"
+        },
+        {
+            "key": "│ {#32} memory  {#keys}│",
+            "type": "memory"
+        },
+        {
+            "key": "│ {#33}󰉉 disk    {#keys}│",
+            "type": "disk",
+            "folders": "/"
+        },
+        {
+            "key": "│ {#34} batt    {#keys}│",
+            "type": "battery"
+        },
+        // --- EXTRAS ---
+        {
+            "key": "│ {#35} media   {#keys}│",
+            "type": "player"
+        },
+        // --- FOOTER ---
+        {
+            "key": "├───────────┤",
+            "type": "custom"
+        },
+        {
+            "key": "│ {#39} colors  {#keys}│",
+            "type": "colors",
+            "symbol": "circle"
+        },
+        {
+            "key": "╰───────────╯",
+            "type": "custom"
+        }
+    ]
+}
